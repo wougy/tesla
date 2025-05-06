@@ -48,7 +48,7 @@ def check_tesla_inventory():
             TESLA_API_URL,
             params={"query": json.dumps(QUERY_PAYLOAD)},
             headers=HEADERS,
-            timeout=15
+            timeout=30
         )
         data = response.json()
         vehicles = data.get("results", [])
